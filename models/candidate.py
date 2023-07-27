@@ -1,12 +1,8 @@
-import json
-from typing import AsyncGenerator, Union
+from typing import AsyncGenerator, Union, Any, Optional, TypeVar, Generic, List
 from pydantic import BaseModel, Field
 from utils.common import Common
 from models.document import Document
 from models.note import Note
-from typing import Any
-from typing import Optional
-from typing import TypeVar, Generic, List
 from api_client.api_client import ApiClient
 
 T = TypeVar('T')
@@ -115,8 +111,8 @@ class Candidate(BaseModel):
         while total_items is None or page_number * page_size < total_items:
             params = {"page": page_number}
             response = await self.api_client.get(f'/candidate/{self.candidate_id}/{object_type}', params=params)
-            page_response = PageResponse[Note](**response) if object_type == 'note' else PageResponse[Document](
-                **response)
+            model_cls = globals()[object_type.capitalize()]
+            page_response = PageResponse[model_cls](**response)
 
             if total_items is None:
                 total_items = page_response.total_count
