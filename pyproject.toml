@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "opus-glue-core"
+version = "0.1.7"
+description = ""
+authors = ["duyet-mai <the@duyet.com>"]
+readme = "README.md"
+packages = []
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyhumps = "^3.8.0"
+pydantic = "^2.0.3"
+requests = "^2.31.0"
+httpx = "^0.24.1"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
