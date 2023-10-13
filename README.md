@@ -1,6 +1,6 @@
 # Sample API Client
 
-This is a Python-based API client designed for interacting with the Jimmy Mai API. The client provides an intuitive and straightforward way to make API calls and manage responses.
+This is a Python-based API client designed for interacting with an external APIs. The client provides an intuitive and straightforward way to make API calls and manage responses.
 
 ## Features
 
