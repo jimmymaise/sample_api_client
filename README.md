@@ -2,6 +2,10 @@
 
 This is a Python-based API client designed for interacting with an external APIs. The client provides an intuitive and straightforward way to make API calls and manage responses.
 
+## Inspiration
+
+The design of this API client is inspired by the [python-gitlab](https://github.com/python-gitlab/python-gitlab) project. It follows similar design philosophies and patterns, including the utilization of manager classes for different types of resources.
+
 ## Features
 
 - **Asynchronous API calls**: Utilizes `httpx` for non-blocking API requests.
@@ -41,8 +45,4 @@ Refer to `main.py` for practical examples demonstrating how to use this API clie
 
 To run the project, execute the following command:
 
-```python main.py```
-
-## Inspiration
-
-The design of this API client is inspired by the [python-gitlab](https://github.com/python-gitlab/python-gitlab) project. It follows similar design philosophies and patterns, including the utilization of manager classes for different types of resources.
+```poetry run python main.py```
